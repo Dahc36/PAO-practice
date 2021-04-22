@@ -13,7 +13,7 @@ const digitDistribution = {
 };
 const digits = [];
 
-for (let i = 0; i < 100000; i++) {
+for (let i = 0; i < 150000; i++) {
   const randomDigit = getBenfordsDigit();
   digits.push(randomDigit);
   digitDistribution[randomDigit]++;
@@ -37,7 +37,6 @@ test(`digit distribution should follow Benford's law`, () => {
   for (let i = 1; i < 10; i++) {
     const distribution = getDigitDistribution(i);
     const expectedDistribution = Math.log10(1 + 1 / i);
-    expect(distribution).toBeCloseTo(expectedDistribution);
-    expect(distribution).toBeCloseTo(expectedDistribution);
+    expect(distribution).toBeCloseTo(expectedDistribution, 2.5);
   }
 });

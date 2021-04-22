@@ -10,7 +10,7 @@ function getRandomNumber(numberLength) {
   let number = 0;
   for (i = 0; i < length; i++) {
     const digit = i === 0 ? getBenfordsDigit() : getRandomDigit();
-    number += digit * Math.pow(10, i);
+    number += digit * Math.pow(10, length - 1 - i);
   }
 
   return number;

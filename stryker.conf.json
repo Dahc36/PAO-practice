@@ -7,5 +7,6 @@
     "progress"
   ],
   "testRunner": "jest",
+  "files": ["src/random/*.js"],
   "coverageAnalysis": "perTest"
 }

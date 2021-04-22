@@ -33,11 +33,10 @@ test('digit should be a number within 1 and 9', () => {
   }
 });
 
-test(`digit distribution should follow expected distribution`, () => {
+test(`digit distribution should follow linear distribution`, () => {
   for (let i = 1; i < 10; i++) {
     const distribution = getDigitDistribution(i);
     const expectedDistribution = 1 / 9;
-    expect(distribution).toBeCloseTo(expectedDistribution);
     expect(distribution).toBeCloseTo(expectedDistribution);
   }
 });
